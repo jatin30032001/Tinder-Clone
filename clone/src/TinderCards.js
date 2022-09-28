@@ -13,7 +13,7 @@ const [people , setPeople] = useState([
     },
 
     {
-        name :"Jeff Bezoz",
+        name :"Jhonny Sins",
         url :"https://media.wired.com/photos/6019cab23453f789506008d0/master/pass/Sec_Bezos_1036084400.jpg"
     }
 
