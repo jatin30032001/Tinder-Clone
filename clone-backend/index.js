@@ -1,19 +1,26 @@
 
 import express from 'express';
 import mongoose from 'mongoose';
-import Cards from "./dbCrads.js";
+import Cards from "./dbCards.js";
 
 
 const app = express();
 
 const port = process.env.PORT || 8001
 
-const connection_url = `mongodb+srv://Jatin:Jatin@123@cluster0.qnn5s1m.mongodb.net/?retryWrites=true&w=majority`
+const connection_url = `mongodb+srv://Jatin:Jatin%40123@cluster0.qnn5s1m.mongodb.net/?retryWrites=true&w=majority`
 
  mongoose.connect(connection_url,{
-    useNewUrlParser :true,
-    useCreateIndex:true,
-    useUnifiedTopology:true,
+
+    useNewUrlParser: true, 
+
+    useUnifiedTopology: true 
+ 
+  
+
+ }, err => {
+        if(err) throw err;
+        console.log('Connected to MongoDB!!!')
  })
 
 
