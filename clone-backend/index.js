@@ -2,13 +2,17 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import Cards from "./dbCards.js";
-
+import Cors from "cors";
 
 const app = express();
 
 const port = process.env.PORT || 8001
 
 const connection_url = `mongodb+srv://Jatin:Jatin%40123@cluster0.qnn5s1m.mongodb.net/?retryWrites=true&w=majority`
+
+
+app.use(express.json());
+app.use(Cors());
 
  mongoose.connect(connection_url,{
 
